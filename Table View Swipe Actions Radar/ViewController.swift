@@ -11,6 +11,9 @@ import UIKit
 class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //This issue can be perfectly reproduced without these, but it seems that it won't start to occur
+        //until these are called at least once.
         self.tableView.beginUpdates()
         self.tableView.endUpdates()
     }
